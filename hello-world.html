@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
     <title>Hello World</title>
 </head>
 <body>
-    
+  <div class="s128">
+    <form>
+      <div class="inner-form">
+        <div class="row">
+          <div class="input-field first" id="first">
+            <input class="input" id="inputFocus" type="text"
+            placeholder="Keyword" data-city-search/>
+            <button class="clear" id="clear">
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    var btnDelete = document.getElementById('clear');
+    var inputFocus = document.getElementById('inputFocus');
+    //- btnDelete.on('click', function(e) {
+    //-   e.preventDefault();
+    //-   inputFocus.classList.add('isFocus')
+    //- })
+    //- inputFocus.addEventListener('click', function() {
+    //-   this.classList.add('isFocus')
+    //- })
+    btnDelete.addEventListener('click', function(e)
+    {
+      e.preventDefault();
+      inputFocus.value = ''
+    })
+    document.addEventListener('click', function(e)
+    {
+      if (document.getElementById('first').contains(e.target))
+      {
+        inputFocus.classList.add('isFocus')
+      }
+      else
+      {
+        // Clicked outside the box
+        inputFocus.classList.remove('isFocus')
+      }
+    });
+
+  </script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPdSf1Rvt_ezerNCumo8H-GRmgJBHdoQg&libraries=places"></script>
+  <script type="text/javascript" src="js/main.js">
+
+  </script>
 </body>
 </html>
