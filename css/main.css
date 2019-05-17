@@ -622,18 +622,3 @@ legend {
 .aqi, .station{
   text-align: center;
 }
-@keyframes changeLetter {
-  0% {
-    content: "A";
-  }
-  50% {
-    color: white;
-  }
-  100% {
-    content: "B";
-  }
-}
-
-.letter-changer::after {
-  animation: changeLetter 3s linear infinite alternate;
-}
