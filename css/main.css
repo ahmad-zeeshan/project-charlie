@@ -14,6 +14,7 @@ html {
  */
 body {
   margin: 0;
+  background: #d8f4fe;
 }
 
 /**
@@ -453,7 +454,7 @@ legend {
 }
 
 .s128 {
-  min-height: 100vh;
+
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -461,7 +462,7 @@ legend {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Poppins', sans-serif;
-  background: #d8f4fe;
+
   padding: 15px;
 }
 
@@ -618,3 +619,6 @@ legend {
 }
 
 /*# sourceMappingURL=Searchs_128.css.map */
+.aqi, .station{
+  text-align: center;
+}
