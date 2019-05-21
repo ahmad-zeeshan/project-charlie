@@ -17,5 +17,10 @@ searchBox.addListener('places_changed', ()=> {
          aqi.textContent = data.data.aqi;
          station.textContent = data.data.city.name;
        });
+       if (aqi.textContent < 50) {
+         document.getElementById("level").innerHTML = "Good" } else {
+          document.getElementById("level").innerHTML = "Bad"
+         };
+       
    }
-})
+});
